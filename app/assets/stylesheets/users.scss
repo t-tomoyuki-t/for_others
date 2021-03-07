@@ -1,0 +1,71 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.sign-up-in{
+    padding: 20px;
+    margin: 20px;
+    font-weight: bold;
+    color: black;
+    background: #fff;
+    
+    margin-top: 80px;
+}
+.actions{
+    text-align: center;
+    margin: 30px;
+}
+.sign-btn{
+    cursor: pointer;
+  font-family: FontAwesome;
+  border: none;
+  background: #fff;
+  border: 1px solid #3879D9;
+  border-radius: 3px;
+  color:  #6091d3;
+  outline : none;
+  width: 4.0em;
+  height: 1.9em;
+  display: inline-block;
+  vertical-align: middle;
+  justify-content: center;
+}
+
+
+.volunteers-container {
+    width: 50%;
+    margin: 10px auto;
+}
+.user-volunteer {
+    padding: 10px;
+    margin: 20px;
+    font-weight: bold;
+    color: #6091d3;/*文字色*/
+    background: rgb(255, 255, 255);
+    border: solid 3px #6091d3;/*線*/
+    border-radius: 10px;/*角の丸み*/
+}
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+}
+.title{
+    text-align: center;
+    padding: 20px;
+    color: black;
+    
+}
+.col-1 {
+    display: inline-block;
+    width: 150px;
+}
+.col-2 {
+    display: inline-block;
+    width: 150px;
+}
+.right{
+    text-align: right;
+    padding: 10px;
+}

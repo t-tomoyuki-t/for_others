@@ -1,0 +1,67 @@
+
+
+<div class="sign-up-in">
+  <div class="field">
+    <div class="col-1">Name</div>
+    <div class="col-2"><%= @user.name %></div>
+  </div>
+  <div class="field">
+    <div class="col-1">Profile</div>
+    <div class="col-2"><%= @user.profile %></div>
+  </div>
+  <div class="field">
+    <% if @user.id == current_user.id %>
+
+    <% else %>
+      <% if @isRoom == true %>
+        <p><a href="/rooms/<%= @roomId %>">DM</a>
+      <% else %>
+        <%= form_for @room do |f| %>
+          <%= fields_for @entry do |e| %>
+            <%= e.hidden_field :user_id, :value=> @user.id %>
+          <% end %>
+          <%= f.submit "DM" %>
+        <% end %>
+      <% end %>
+    <% end %>
+    <% if current_user.id == @user.id %>
+      <%= link_to "編集する", edit_user_registration_path %>
+    <% end %>
+  </div>
+</div>
+
+<div class="volunteers-container">
+  <% @user.volunteers.each do |t| %>  
+    <div class="user-volunteer">
+      <div class="flex-container">
+        <div class="title">
+          <h3><%= t.title %></h3>
+        </div>
+      <div class="field">
+        <div>
+          <div class="col-1">day</div>
+          <div class="col-2"><%= t.do_on %></div>
+        </div>
+        <div>
+          <div class="col-1">area</div>
+          <div class="col-2"><%= t.area %></div>
+        </div>
+        <div>
+          <div class="col-1">gender</div>
+          <div class="col-2"><%= t.gender %></div>
+        </div>
+        <div>
+          <div class="col-1">from</div>
+          <div class="col-2"><%= t.from_area %></div>
+        </div>
+        <br/>  
+        <p><%= t.text %></p>
+      </div>
+      <div class="right">
+        <p><a href="/users/<%= @user.id %>"><%= @user.name %></a></p>
+        <p><%= t.created_at.to_s(:datetime_jp) %></p>
+      </div>
+    </div>
+  </div>
+  <% end %>
+</div>

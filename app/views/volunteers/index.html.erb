@@ -1,0 +1,57 @@
+<div class="search">
+<%= form_with(scope: :search, url: volunteers_path, method: :get, local: true) do |f| %>
+
+  <div class="field">
+  <%= f.label :do_on, "day" %>
+  <%= f.date_field :do_from, value: @search_params[:do_from] %> -
+  <%= f.date_field :do_to, value: @search_params[:do_to] %>
+  </div>
+
+  <div class="field">
+  <%= f.label :area, "area" %>
+  <%=  f.select :area, Volunteer.area_numbers.keys, {} , value: @search_params[:area]%>
+  <%= f.submit 'search', class: "button" %>
+  </div>
+
+  
+<% end %>
+</div>
+
+
+
+
+<div class="volunteers-container">
+  <% @volunteers.each do |t| %>
+    <div class="volunteer">
+      <div class="flex-container">
+        <div class="title">
+          <h3><%= t.title %></h3>
+        </div>
+        <div class="field">
+          <div>
+            <div>
+              <div class="col-1">day</div>
+              <div class="col-2"><%= t.do_on %></div>
+            </div>
+            <div>
+              <div class="col-1">area</div>
+              <div class="col-2"><%= t.area %></div>
+            </div>
+            <div>
+              <div class="col-1">gender</div>
+              <div class="col-2"><%= t.gender %></div>
+            </div>
+            <div>
+              <div class="col-1">from</div>
+              <div class="col-2"><%= t.from_area %></div>
+            </div>  
+          </div>
+        </div>
+        <div class="right">
+          <p><%= link_to "more...", volunteer_path(t.id) %></p>
+          <p><%= t.created_at.to_s(:datetime_jp) %></p>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>

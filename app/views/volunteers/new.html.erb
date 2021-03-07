@@ -1,0 +1,43 @@
+<div class="volunteers-container">
+<div class="volunteer">
+<div class="flex-container">
+<%= form_for @volunteer do |f| %>
+  <div class="field">
+    <%= f.label :タイトル %>
+    <%= f.text_field :title, :size => 30 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :日付 %>
+    <%= f.date_field  :do_on %>
+  </div>
+
+  <div class="field">
+    <%= f.label :地域 %>
+    <%= f.select :area, Volunteer.area_numbers.keys, {} %>
+  </div>
+
+  <div class="field">
+    <%= f.label :希望する性別 %>
+    <%= f.select :gender, 
+    [[" ", " "],
+    ["女性","女性"],
+    ["男性","男性"]] %>
+  </div>
+
+  <div class="field">
+    <%= f.label :応募者の地域 %>
+    <%= f.select :from_area, Volunteer.area_numbers.keys, {} %>
+  </div>
+
+  <div class="field">
+    <%= f.label :募集内容 %>
+    <%= f.text_area :text, :size => "30x2" %>
+  </div>
+  <div class="actions">
+  <%= f.submit "Post", class: "post-btn" %>
+  </div>
+<% end %>
+</div>
+</div>
+</div>

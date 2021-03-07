@@ -1,0 +1,38 @@
+<div class="volunteers-container">
+<div class="volunteer">
+<div class="flex-container">
+<div class="title">
+  <h3><%= @volunteer.title %></h3>
+</div>
+<div class="field">
+<div>
+  <div>
+    <div class="col-1">day</div>
+    <div class="col-2"><%= @volunteer.do_on %></div>
+  </div>
+  <div>
+    <div class="col-1">area</div>
+    <div class="col-2"><%= @volunteer.area %></div>
+  </div>
+  <div>
+    <div class="col-1">gender</div>
+    <div class="col-2"><%= @volunteer.gender %></div>
+  </div>
+  <div>
+    <div class="col-1">from</div>
+    <div class="col-2"><%= @volunteer.from_area %></div>
+  </div>
+  <br/>  
+  <p><%= @volunteer.text %></p>
+</div>
+<div class="right">
+    <p><a href="/users/<%= @volunteer.user.id %>"><%= @volunteer.user.name %></a></p>
+    <% if user_signed_in? && current_user.id == @volunteer.user_id %>  
+    　<p><%= link_to "Edit", edit_volunteer_path(@volunteer.id) %>
+    　<%= link_to "Delete", volunteer_path(@volunteer.id), method: :delete %></p>
+    <% end %>
+    <p><%= @volunteer.created_at.to_s(:datetime_jp) %></p>
+</div>
+</div>
+</div>
+</div>

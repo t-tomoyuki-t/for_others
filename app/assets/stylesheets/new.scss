@@ -1,0 +1,33 @@
+.volunteers-container {
+        width: 50%;
+        margin: 10px auto;
+}
+.volunteer {
+    padding: 10px;
+    margin: 20px;
+    font-weight: bold;
+    color: black;
+    background: rgb(255, 255, 255);
+    
+    margin-top: 100px;
+}
+.actions{
+    text-align: center;
+    margin: 30px;
+}
+
+.post-btn{
+    cursor: pointer;
+  font-family: FontAwesome;
+  border: none;
+  background: #fff;
+  border: 1px solid #3879D9;
+  border-radius: 3px;
+  color:  #6091d3;
+  outline : none;
+  width: 4.0em;
+  height: 1.9em;
+  display: inline-block;
+  vertical-align: middle;
+  justify-content: center;
+}

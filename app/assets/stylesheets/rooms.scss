@@ -1,0 +1,49 @@
+// Place all the styles related to the rooms controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+.dm-container {
+    padding:0;
+    max-width: 500px; 
+    margin: 20px auto;
+    font-size: 100%;
+    margin-top: 100px;
+    border: 1px solid;
+    border-radius: 8px;
+    border-color:#3878D9;
+    background-color:#fff;
+    max-height: 600px;
+    
+}
+
+.contents-scroll{
+    overflow: scroll;
+}
+.right-contents{
+    text-align: right;
+    margin-right: 10px;
+}
+
+.left-contents{
+    text-align: left;
+    margin-left: 10px;
+}
+.message{
+    margin-top: 10px;
+}
+.dm-actions{
+    text-align: right;
+}
+
+.send-btn{
+    cursor: pointer;
+  font-family: FontAwesome;
+  border: none;
+  background: #fff;
+  border: 1px solid #3879D9;
+  border-radius: 3px;
+  color:  #6091d3;
+  outline : none;
+  width: 4.0em;
+  height: 1.9em;
+  vertical-align: middle;
+}

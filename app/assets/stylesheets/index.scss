@@ -1,0 +1,66 @@
+.search{
+    margin-top: 100px;
+    font-weight: bold;
+}
+
+.button{
+    cursor: pointer;
+  font-family: FontAwesome;
+  border: none;
+  background: #fff;
+  border: 1px solid #3879D9;
+  border-radius: 3px;
+  color: #3879D9;
+  outline : none;
+  width: 3.5em;
+  height: 1.9em;
+  display: inline-block;
+  vertical-align: middle;
+
+}
+.volunteers-container {
+    width: 50%;
+    margin: 10px auto;
+}
+
+.volunteer {
+    padding: 10px;
+    margin: 20px;
+    font-weight: bold;
+    color: #6091d3;/*文字色*/
+    background: rgb(255, 255, 255);
+    border: solid 3px #6091d3;/*線*/
+    border-radius: 10px;/*角の丸み*/
+    
+}
+  
+  
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.title{
+    text-align: center;
+    padding: 20px;
+    color: black;
+    
+}
+.field{
+    text-align: center;
+    padding: 10px;
+}
+.col-1 {
+    display: inline-block;
+    width: 150px;
+}
+.col-2 {
+    display: inline-block;
+    width: 150px;
+}
+.right{
+    text-align: right;
+    padding: 10px;
+}

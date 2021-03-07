@@ -1,0 +1,38 @@
+
+<div class="sign-up-in">
+<% if user_signed_in? %>
+    <div class="field">
+        <div class="col-1">Name</div>
+        <div class="col-2"><%= current_user.name %></div>
+    </div>
+    <div class="field">
+        <div class="col-1">E-mail</div>
+        <div class="col-2"><%= current_user.email %></div>
+    </div>
+    <div class="field">
+        <div class="col-1">Profile</div>
+        <div class="col-2"><%= current_user.profile%></div>
+    </div>
+    <div class="right">
+    <%= link_to "編集する", edit_user_registration_path %>
+    </div>
+    </div>
+</div>
+<div class="field">
+    <h3>DM</h3><br/>
+    <% @entries_1.each do |e| %>
+        <% @entries_2.each do |f| %>
+            <% if (e.user_id == current_user.id) && (e.room_id == f.room_id) %>
+                <p><%= link_to room_path(f.room.id) do %>
+                    <%= f.user.name %><br>
+                <% end %>
+                </p>
+            <% end %>
+        <% end %>
+    <% end %>
+    
+  
+  
+
+<% end %>
+</div>
