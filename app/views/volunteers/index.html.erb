@@ -1,20 +1,17 @@
 <div class="search">
-<%= form_with(scope: :search, url: volunteers_path, method: :get, local: true) do |f| %>
+  <%= form_with(scope: :search, url: volunteers_path, method: :get, local: true) do |f| %>
+    <div class="field">
+      <%= f.label :do_on, "day" %>
+      <%= f.date_field :do_from, value: @search_params[:do_from] %> -
+      <%= f.date_field :do_to, value: @search_params[:do_to] %>
+    </div>
 
-  <div class="field">
-  <%= f.label :do_on, "day" %>
-  <%= f.date_field :do_from, value: @search_params[:do_from] %> -
-  <%= f.date_field :do_to, value: @search_params[:do_to] %>
-  </div>
-
-  <div class="field">
-  <%= f.label :area, "area" %>
-  <%=  f.select :area, Volunteer.area_numbers.keys, {} , value: @search_params[:area]%>
-  <%= f.submit 'search', class: "button" %>
-  </div>
-
-  
-<% end %>
+    <div class="field">
+      <%= f.label :area, "area" %>
+      <%=  f.select :area, Volunteer.area_numbers.keys, {} , value: @search_params[:area]%>
+      <%= f.submit 'search', class: "button" %>
+    </div>
+  <% end %>
 </div>
 
 

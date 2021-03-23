@@ -23,16 +23,11 @@
     <% @entries_1.each do |e| %>
         <% @entries_2.each do |f| %>
             <% if (e.user_id == current_user.id) && (e.room_id == f.room_id) %>
-                <p><%= link_to room_path(f.room.id) do %>
-                    <%= f.user.name %><br>
-                <% end %>
+                <p> <%= link_to room_path(f.room.id) do %>
+                        <%= f.user.name %><br>
+                    <% end %>
                 </p>
             <% end %>
         <% end %>
     <% end %>
-    
-  
-  
-
-<% end %>
 </div>
