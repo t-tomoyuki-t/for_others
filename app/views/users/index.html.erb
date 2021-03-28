@@ -1,22 +1,19 @@
-
 <div class="sign-up-in">
-<% if user_signed_in? %>
-    <div class="field">
-        <div class="col-1">Name</div>
-        <div class="col-2"><%= current_user.name %></div>
-    </div>
-    <div class="field">
-        <div class="col-1">E-mail</div>
-        <div class="col-2"><%= current_user.email %></div>
-    </div>
-    <div class="field">
-        <div class="col-1">Profile</div>
-        <div class="col-2"><%= current_user.profile%></div>
-    </div>
-    <div class="right">
-    <%= link_to "編集する", edit_user_registration_path %>
-    </div>
-    </div>
+        <div class="field">
+            <div class="col-1">Name</div>
+            <div class="col-2"><%= current_user.name %></div>
+        </div>
+        <div class="field">
+            <div class="col-1">E-mail</div>
+            <div class="col-2"><%= current_user.email %></div>
+        </div>
+        <div class="field">
+            <div class="col-1">Profile</div>
+            <div class="col-2"><%= current_user.profile%></div>
+        </div>
+        <div class="right">
+            <%= link_to "編集する", edit_user_registration_path %>
+        </div>
 </div>
 <div class="field">
     <h3>DM</h3><br/>
